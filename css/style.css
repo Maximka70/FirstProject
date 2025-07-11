@@ -219,7 +219,7 @@ textarea {
   position: absolute;
   display: block;
   padding-right: 13.05px;
-  background: url("/images/Icon.svg") no-repeat;
+  background: url("../images/Icon.svg") no-repeat;
   width: 30.94px;
   height: 30.94px;
   top: 50%;
@@ -611,7 +611,7 @@ textarea {
 .subsequence__title1::before {
   content: "";
   position: absolute;
-  background: url("/images/Circle_Bottom1.svg") no-repeat;
+  background: url("../images/Circle_Bottom1.svg") no-repeat;
   width: 72px;
   height: 72px;
   top: 50%;
@@ -624,7 +624,7 @@ textarea {
 .subsequence__title2::before {
   content: "";
   position: absolute;
-  background: url("/images/Circle_Bottom2.svg") no-repeat;
+  background: url("../images/Circle_Bottom2.svg") no-repeat;
   width: 72px;
   height: 72px;
   top: 50%;
@@ -636,7 +636,7 @@ textarea {
 .subsequence__title3::before {
   content: "";
   position: absolute;
-  background: url("/images/Circle_Bottom3.svg") no-repeat;
+  background: url("../images/Circle_Bottom3.svg") no-repeat;
   width: 72px;
   height: 72px;
   top: 50%;
@@ -704,8 +704,8 @@ textarea {
 .background__images {
   height: 502px;
   background:
-    url('/images/WhiteCar.svg') left center no-repeat,
-    url('/images/CrocodileImage.svg') right center no-repeat;
+    url('../images/WhiteCar.svg') left center no-repeat,
+    url('../images/CrocodileImage.svg') right center no-repeat;
   background-size: contain;
   position: relative;
   display: flex;

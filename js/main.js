@@ -34,13 +34,24 @@ $(function () {
   // --------------------------Burger Menu-------------------------
 
 
-  setInterval(() => {
-    if ($(window).scrollTop() > 0 && $('.header__nav').hasClass('header__nav--open')===false) {
-      $('.burger').addClass('burger--follow')
-    } else {
-      $('.burger').removeClass('burger--follow')
-    }
-  }, 0);
+
+
+
+  // setInterval(() => {
+  //   if ($(window).scrollTop() > 0 && !$('.header__nav').hasClass('header__nav--open')) {
+  //     $('.burger').addClass('burger--follow')
+  //   } else {
+  //     $('.burger').removeClass('burger--follow')
+  //   }
+  // }, 0);
+
+  $(window).on('scroll', function() {
+  if ($(window).scrollTop() > 0 && !$('.header__nav').hasClass('header__nav--open')) {
+    $('.burger').addClass('burger--follow');
+  } else {
+    $('.burger').removeClass('burger--follow');
+  }
+});
 
   $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()

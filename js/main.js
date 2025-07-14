@@ -58,6 +58,7 @@ $(function () {
     $('.header__nav').toggleClass('header__nav--open')
     $('.burger').toggleClass('burger--close')
     $('.overlay').toggleClass('overlay--show')
+    $('.burger').removeClass('burger--follow')
   })
 
   // -----------------------------Blog--------------------------

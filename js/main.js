@@ -1,10 +1,12 @@
 $(function () {
+
+  // ------------------------Rating-------------------------
   const stars = document.querySelectorAll(".star");
   const ratingText = document.getElementById("rating-score");
   let currentRating = 0;
 
   stars.forEach((star) => {
-    star.addEventListener("mouseover",() => {
+    star.addEventListener("mouseover", () => {
       const value = star.getAttribute("data-value");
       highlightStar(value);
     });
@@ -28,7 +30,27 @@ $(function () {
       }
     });
   };
-  
+
+  // --------------------------Burger Menu-------------------------
+
+
+  setInterval(() => {
+    if ($(window).scrollTop() > 0 && $('.header__nav').hasClass('header__nav--open')===false) {
+      $('.burger').addClass('burger--follow')
+    } else {
+      $('.burger').removeClass('burger--follow')
+    }
+  }, 0);
+
+  $('.burger, .overlay').on('click', function (e) {
+    e.preventDefault()
+    $('.header__nav').toggleClass('header__nav--open')
+    $('.burger').toggleClass('burger--close')
+    $('.overlay').toggleClass('overlay--show')
+  })
+
+  // -----------------------------Blog--------------------------
+
   var mixer = mixitup('.blog__list');
 
   $('.blog__filter-btn').on('click', function () {
@@ -36,27 +58,14 @@ $(function () {
     $(this).addClass('blog__filter-btn--active')
   })
 
-  const mediaQuery = window.matchMedia('(max-width: 768px)');
-  let sliderView = 0;
-  function handleTabletChange(e) {
-  if (e.matches) {
-  return sliderView = 1;
-  } else {
-  return sliderView = 2;
-  }
-}
-handleTabletChange(mediaQuery);
-mediaQuery.addListener(handleTabletChange);
-
-
-
+  // --------------------------------Slider-----------------------
   $('.opinions__slider').slick({
     arrows: false,
     infinite: true,
     draggable: false,
     dots: true,
-    slidesToShow: sliderView,
-    slidesToScroll: sliderView,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     waitForAnimate: false,
     appendDots: $('.opinions__dots'),
   })
@@ -71,6 +80,7 @@ mediaQuery.addListener(handleTabletChange);
   })
 
 
+  // --------------------------Accordeon-------------------------
   $('.questions__acc-link').on('click', function (e) {
     e.preventDefault()
     if ($(this).hasClass('questions__acc-link--active')) {

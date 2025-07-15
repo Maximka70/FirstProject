@@ -45,13 +45,13 @@ $(function () {
   //   }
   // }, 0);
 
-  $(window).on('scroll', function() {
-  if ($(window).scrollTop() > 0 && !$('.header__nav').hasClass('header__nav--open')) {
-    $('.burger').addClass('burger--follow');
-  } else {
-    $('.burger').removeClass('burger--follow');
-  }
-});
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 0 && !$('.header__nav').hasClass('header__nav--open')) {
+      $('.burger').addClass('burger--follow');
+    } else {
+      $('.burger').removeClass('burger--follow');
+    }
+  });
 
   $('.burger, .overlay').on('click', function (e) {
     e.preventDefault()
@@ -78,6 +78,16 @@ $(function () {
     dots: true,
     slidesToShow: 2,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          draggable: true
+        }
+      }
+    ],
     waitForAnimate: false,
     appendDots: $('.opinions__dots'),
   })

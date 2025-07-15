@@ -80,7 +80,7 @@ $(function () {
     slidesToScroll: 2,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 770,
         settings: {
           slidesToScroll: 1,
           slidesToShow: 1,
@@ -116,6 +116,13 @@ $(function () {
       $(this).children('.questions__acc-text').slideDown()
     }
   })
+  // ------------------------Scroll---------------------------------
 
+  $(".header__nav-list a").on('click', function (e) {
+    e.preventDefault()
+    var id = $(this).attr('href'),
+      top = $(id).offset().top
+    $('body,html').animate({ scrollTop: top }, 1500)
+  })
 
 })

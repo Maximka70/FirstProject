@@ -26,7 +26,8 @@ html {
 }
 
 select,
-textarea {
+textarea,
+input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -2159,8 +2160,16 @@ textarea {
 
   .blank__propers {
     padding: 0px 10px;
-    max-width: 166px;
+    max-width: 133px;
     width: 100%;
+  }
+
+  .contact__form-blank {
+    width: 350px;
+  }
+
+  contact__form-blank input {
+    font-size: 14px;
   }
 
   .contact__form-blank select {
